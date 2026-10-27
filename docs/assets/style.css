@@ -11,6 +11,7 @@
   --primary: #e88b7d;      /* 線・飾りだけに使う（文字には薄すぎる） */
   --link: #a84d40;         /* 背景の上で5.2:1。白い文字を乗せても5.53:1 */
   --accent: #5f9e82;
+  --catch: #946055;        /* トップの見出し。背景の上で4.86:1 */
   --note-bg: #fff6e9;
   --note-border: #f0d9ad;
 }
@@ -25,6 +26,7 @@
     --primary: #e8a99d;
     --link: #f0bcb2;
     --accent: #93c7b7;
+    --catch: #f0c4b8;
     --note-bg: #322a20;
     --note-border: #5a4a30;
   }
@@ -61,7 +63,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--link); outline-
 .brand small { font-size: 0.8rem; font-weight: 400; color: var(--text-muted); margin-left: 6px; letter-spacing: 0.08em; }
 .site-nav a { font-size: 0.94rem; font-weight: 700; text-decoration: none; padding: 8px 4px; }
 
-main { padding: 32px 0 48px; }
+main.wrap { padding-top: 32px; padding-bottom: 48px; }  /* .wrap の左右の余白は残す */
 
 h1 {
   font-family: "Hiragino Maru Gothic ProN", "Hiragino Sans", sans-serif;
@@ -82,6 +84,22 @@ p { margin: 0 0 14px; }
 ul, ol { margin: 0 0 14px; padding-left: 1.4em; }
 li { margin-bottom: 6px; }
 
+/* トップの見出し：やわらかい色の丸ゴシック。パソコンでは1行、
+   1行に収まらない幅（スマホなど）では「、」のあとで2行にする */
+.catch {
+  color: var(--catch);
+  font-family: "Hiragino Maru Gothic ProN", "Hiragino Sans", sans-serif;
+  font-weight: 400;
+  font-feature-settings: "palt";
+  white-space: nowrap;
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+.narrow-only { display: none; }
+@media (max-width: 719px) {
+  .catch { font-size: 1.4rem; }
+  .narrow-only { display: inline; }
+}
 .lead { font-size: 1.06rem; }
 .nobr { display: inline-block; }  /* 見出しを言葉の途中で折り返さない */
 .muted { color: var(--text-muted); font-size: 0.875rem; }
