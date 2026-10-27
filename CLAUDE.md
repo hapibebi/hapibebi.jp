@@ -25,7 +25,7 @@
 
 - ほかのアプリを出すときは `/アプリの短い名前/privacy/` のように、アプリごとにフォルダを足す
 - プライバシーポリシー・利用規約は、2026-09-23 制定の Artifact（claude.ai）の文面がもと。2026-10-27 に ChatGPT の review
-  （`handoff/responses/20261027_2133_review-hapibebi-site.md`）を受け、本人が選んだ指摘を反映：全面免責をやめる、TestFlight で
+  （`handoff/archive/responses/20261027_2133_review-hapibebi-site.md`）を受け、本人が選んだ指摘を反映：全面免責をやめる、TestFlight で
   名前・メールが見えることを書く、問い合わせ（Googleフォーム・iCloudメール）の保存は**対応が終わってから1年以内に削除**、
   運営者の氏名・住所は**求めに応じて回答**（Webには載せない）、開示・削除などの請求窓口、規約の変更は民法548条の4に沿う、
   料金は無料と明記、「Apple Account」に統一。Apple のガイドライン 5.1.3(ii)（健康情報の iCloud 保存）は Apple の回答待ちで文面は変えていない。
@@ -54,7 +54,7 @@
   1. 【Claude】証明書の状態を確認。できていれば `gh api -X PUT repos/hapibebi/hapibebi.jp/pages -F https_enforced=true` で
      「Enforce HTTPS」をオン。できていなければ、独自ドメインを一度外して付け直す（GitHub の Settings → Pages）
   2. 【Claude＋Yuki】https://hapibebi.jp の4ページが鍵マーク付きで開けるか確認
-  3. 【ChatGPT】review の依頼済み（`handoff/requests/20261027_2133_review-hapibebi-site.md`）。回答を見て直す
+  3. ~~【ChatGPT】review~~ → 2026-10-27 に回答を受けて反映・公開済み（依頼と回答は archive へ）
   6. 【Yuki】App Store Connect のサポートURL・プライバシーポリシーURL を変える
   7. 【Claude】アプリ内のリンク（`SettingsView.swift` の `privacyPolicyAndTerms`）を次のビルドで新しいアドレスに
   8. 【Claude＋Yuki】hapibebi.com → hapibebi.jp の転送（急がない）
