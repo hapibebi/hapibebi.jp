@@ -50,11 +50,13 @@
   エックスサーバーの DNS に A 4行（185.199.108〜111.153）と `www` CNAME（hapibebi.github.io）を追加、21:59 に3台へ反映
 - 2026-10-27 夜の時点：**HTTPS の証明書がまだ発行されていない**（`gh api repos/hapibebi/hapibebi.jp/pages` の
   `https_certificate` が null）。本人の家の回線は「行き先なし」の古い答えを覚えていて、22:45ごろまで開けなかった
+- 2026-10-27 23:08：**公開完了**。証明書が1時間待っても発行されなかったため、独自ドメインを API で外して付け直したら
+  すぐ発行された（期限 2027-01-25、GitHub が自動更新）。付け直しの直後の組み立て2回は取り消し（重なったため）、3回目で成功。
+  「Enforce HTTPS」オン。https://hapibebi.jp の4ページと404を確認
 - 次にやること：
-  1. 【Claude】証明書の状態を確認。できていれば `gh api -X PUT repos/hapibebi/hapibebi.jp/pages -F https_enforced=true` で
-     「Enforce HTTPS」をオン。できていなければ、独自ドメインを一度外して付け直す（GitHub の Settings → Pages）
-  2. 【Claude＋Yuki】https://hapibebi.jp の4ページが鍵マーク付きで開けるか確認
-  3. ~~【ChatGPT】review~~ → 2026-10-27 に回答を受けて反映・公開済み（依頼と回答は archive へ）
-  6. 【Yuki】App Store Connect のサポートURL・プライバシーポリシーURL を変える
-  7. 【Claude】アプリ内のリンク（`SettingsView.swift` の `privacyPolicyAndTerms`）を次のビルドで新しいアドレスに
-  8. 【Claude＋Yuki】hapibebi.com → hapibebi.jp の転送（急がない）
+  1. 【Yuki】iPhone の Safari で https://hapibebi.jp を開いて確認
+  2. 【Yuki】App Store Connect の「サポートURL」を https://hapibebi.jp/support/、「プライバシーポリシーURL」を
+     https://hapibebi.jp/sodachi/privacy/ に変える
+  3. 【Claude】アプリ内のリンク（`SettingsView.swift` の `privacyPolicyAndTerms`）を次のビルドで新しいアドレスに
+  4. 【Claude＋Yuki】hapibebi.com → hapibebi.jp の転送（急がない）
+- 済んだこと：ChatGPT の review（2026-10-27 に回答を受けて反映・公開。依頼と回答は archive へ）
