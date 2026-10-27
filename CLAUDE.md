@@ -37,13 +37,18 @@
 - 確認：`python3 -m http.server 8765 --directory docs` で表示し、幅390pxで撮影して見る
 
 ## 開発進捗
-- 2026-10-27：4ページと共通のCSSを作り、パソコンの中で表示を確認（ライト・ダーク）。組織 `hapibebi` を作成済み（Yukiさん）
+- 2026-10-27：4ページと共通のCSSを作り、パソコンの中で表示を確認（ライト・ダーク）。トップの見出しは本人の希望で
+  やわらかい色の丸ゴシック・句点なし（パソコン1行、スマホは「、」で2行）。サポートから #8000・119 の文は削除（本人判断）
+- 2026-10-27：組織 `hapibebi` を作成、組織でドメイン hapibebi.jp を確認済み（`_github-pages-challenge-hapibebi` の TXT）。
+  公開リポジトリ `hapibebi/hapibebi.jp` に送り、GitHub Pages（main の `/docs`）と独自ドメインを設定。
+  エックスサーバーの DNS に A 4行（185.199.108〜111.153）と `www` CNAME（hapibebi.github.io）を追加、21:59 に3台へ反映
+- 2026-10-27 夜の時点：**HTTPS の証明書がまだ発行されていない**（`gh api repos/hapibebi/hapibebi.jp/pages` の
+  `https_certificate` が null）。本人の家の回線は「行き先なし」の古い答えを覚えていて、22:45ごろまで開けなかった
 - 次にやること：
-  1. 【Yuki】中身の確認（とくにトップの紹介文、サポートページの文）
-  2. 【ChatGPT】プライバシーポリシー・サポートページの review（任意）
-  3. 【Claude】Yukiさんの承認後、GitHub にリポジトリを作って送り、GitHub Pages を有効にする
-  4. 【Yuki】エックスサーバーの DNS に GitHub Pages 用の行を追加、GitHub で組織のドメインの確認（乗っ取り防止）
-  5. 【Claude＋Yuki】HTTPS を有効にして表示を確認
+  1. 【Claude】証明書の状態を確認。できていれば `gh api -X PUT repos/hapibebi/hapibebi.jp/pages -F https_enforced=true` で
+     「Enforce HTTPS」をオン。できていなければ、独自ドメインを一度外して付け直す（GitHub の Settings → Pages）
+  2. 【Claude＋Yuki】https://hapibebi.jp の4ページが鍵マーク付きで開けるか確認
+  3. 【ChatGPT】review の依頼済み（`handoff/requests/20261027_2133_review-hapibebi-site.md`）。回答を見て直す
   6. 【Yuki】App Store Connect のサポートURL・プライバシーポリシーURL を変える
   7. 【Claude】アプリ内のリンク（`SettingsView.swift` の `privacyPolicyAndTerms`）を次のビルドで新しいアドレスに
   8. 【Claude＋Yuki】hapibebi.com → hapibebi.jp の転送（急がない）
