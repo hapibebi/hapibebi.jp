@@ -53,10 +53,10 @@
 - 2026-10-27 23:08：**公開完了**。証明書が1時間待っても発行されなかったため、独自ドメインを API で外して付け直したら
   すぐ発行された（期限 2027-01-25、GitHub が自動更新）。付け直しの直後の組み立て2回は取り消し（重なったため）、3回目で成功。
   「Enforce HTTPS」オン。https://hapibebi.jp の4ページと404を確認
+- 2026-10-28：本人が iPhone の Safari で表示を確認（問題なし）。App Store Connect（そだち手帳 1.0）に
+  「サポートURL」https://hapibebi.jp/support/ と「プライバシーポリシーURL」https://hapibebi.jp/sodachi/privacy/ を登録
+  （「ユーザプライバシー選択URL」は、集めるデータがないので空欄）
 - 次にやること：
-  1. 【Yuki】iPhone の Safari で https://hapibebi.jp を開いて確認
-  2. 【Yuki】App Store Connect の「サポートURL」を https://hapibebi.jp/support/、「プライバシーポリシーURL」を
-     https://hapibebi.jp/sodachi/privacy/ に変える
-  3. 【Claude】アプリ内のリンク（`SettingsView.swift` の `privacyPolicyAndTerms`）を次のビルドで新しいアドレスに
-  4. 【Claude＋Yuki】hapibebi.com → hapibebi.jp の転送（急がない）
+  1. 【Claude】アプリ内のリンク（`SettingsView.swift` の `privacyPolicyAndTerms`）を次のビルドで新しいアドレスに
+  2. 【Claude＋Yuki】hapibebi.com → hapibebi.jp の転送（急がない）
 - 済んだこと：ChatGPT の review（2026-10-27 に回答を受けて反映・公開。依頼と回答は archive へ）
