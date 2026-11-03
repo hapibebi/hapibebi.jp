@@ -56,6 +56,9 @@
 - 2026-10-28：本人が iPhone の Safari で表示を確認（問題なし）。App Store Connect（そだち手帳 1.0）に
   「サポートURL」https://hapibebi.jp/support/ と「プライバシーポリシーURL」https://hapibebi.jp/sodachi/privacy/ を登録
   （「ユーザプライバシー選択URL」は、集めるデータがないので空欄）
+- 2026-11-03：そだち手帳の審査通過。11/8 公開用に、トップを「公開中」＋「App Storeで見る」ボタン（`https://apps.apple.com/jp/app/id6811896575`）＋
+  Safari のスマートバナー（`apple-itunes-app`）に変更。**ブランチ `release-20261108` にコミット済み・まだ送っていない**。11/8、App Store で開けるのを確かめてから、
+  Yukiさんの承認を得て main に取り込んで送る。キャンペーンリンクができたら、ボタンのリンクを差し替える
 - 次にやること：
   1. 【Claude】アプリ内のリンク（`SettingsView.swift` の `privacyPolicyAndTerms`）を次のビルドで新しいアドレスに
   2. 【Claude＋Yuki】hapibebi.com → hapibebi.jp の転送（急がない）
