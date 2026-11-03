@@ -143,6 +143,9 @@ li { margin-bottom: 6px; }
 .app-icon svg { display: block; width: 100%; height: 100%; }
 .app-card h3 { margin: 0 0 4px; font-size: 1.15rem; }
 .status { display: inline-block; font-size: 0.8rem; font-weight: 700; color: var(--text-muted); border: 1px solid var(--border); border-radius: 999px; padding: 0 10px; margin-bottom: 8px; }
+/* App Store のバッジ：Appleのルールで高さ40px以上、まわりに高さの1/4以上の余白。画像は手を加えない */
+.store-badge { display: inline-block; margin: 12px 0 16px; }
+.store-badge img { display: block; height: 48px; width: auto; }
 .links { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 0.94rem; margin: 0; padding: 0; list-style: none; }
 
 /* よくある質問 */
@@ -161,3 +164,4 @@ th { white-space: nowrap; color: var(--text-muted); font-size: 0.875rem; }
 /* フッター */
 .site-footer { border-top: 1px solid var(--border); padding: 24px 0 40px; font-size: 0.875rem; color: var(--text-muted); }
 .site-footer .links { margin-bottom: 10px; }
+.site-footer .legal { font-size: 0.8125rem; margin-top: 8px; }

@@ -58,7 +58,10 @@
   （「ユーザプライバシー選択URL」は、集めるデータがないので空欄）
 - 2026-11-03：そだち手帳の審査通過。11/8 公開用に、トップを「公開中」＋「App Storeで見る」ボタン（`https://apps.apple.com/jp/app/id6811896575`）＋
   Safari のスマートバナー（`apple-itunes-app`）に変更。**ブランチ `release-20261108` にコミット済み・まだ送っていない**。11/8、App Store で開けるのを確かめてから、
-  Yukiさんの承認を得て main に取り込んで送る。キャンペーンリンクができたら、ボタンのリンクを差し替える
+  Yukiさんの承認を得て main に取り込んで送る。キャンペーンリンクができたら、バッジのリンクを差し替える
+- 2026-11-03：ボタンを Apple 公式の日本語バッジに差し替え（`docs/assets/appstore-badge-ja-black.svg`・`-white.svg`、ダークモードは白）。
+  画像は App Store マーケティングツール（toolbox.marketingtools.apple.com）の `/api/v2/badges/download-on-the-app-store/{black|white}/ja-jp` から取得、手を加えない。
+  Apple のルール：高さ40px以上（48pxにした）、まわりに高さの1/4以上の余白、1画面に1つ、バッジを使うページに商標の表記（トップのフッターに入れた）
 - 次にやること：
   1. 【Claude】アプリ内のリンク（`SettingsView.swift` の `privacyPolicyAndTerms`）を次のビルドで新しいアドレスに
   2. 【Claude＋Yuki】hapibebi.com → hapibebi.jp の転送（急がない）
