@@ -65,6 +65,7 @@
 - 2026-11-03：ボタンを Apple 公式の日本語バッジに差し替え（`docs/assets/appstore-badge-ja-black.svg`・`-white.svg`、ダークモードは白）。
   画像は App Store マーケティングツール（toolbox.marketingtools.apple.com）の `/api/v2/badges/download-on-the-app-store/{black|white}/ja-jp` から取得、手を加えない。
   Apple のルール：高さ40px以上（48pxにした）、まわりに高さの1/4以上の余白、1画面に1つ、バッジを使うページに商標の表記（トップのフッターに入れた）
+- **2026-11-08：公開**。そだち手帳が App Store に並んだのを確かめ、Yukiさんの OK を得て `release-20261108` を main に取り込んで送った（GitHub 側にあった CNAME の改行だけの変更も取り込んだ）。hapibebi.jp で「公開中（無料）」・バッジ（リンク先 App Store）・スマートバナーの設定・商標の表記を確認。キャンペーンリンクができたら、バッジのリンクを差し替える
 - 次にやること：
   1. 【Claude】アプリ内のリンク（`SettingsView.swift` の `privacyPolicyAndTerms`）を次のビルドで新しいアドレスに
   2. 【Claude＋Yuki】hapibebi.com → hapibebi.jp の転送（急がない）
